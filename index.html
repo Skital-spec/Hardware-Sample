@@ -4,281 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BrightBuild Hardware</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-
-    header {
-      background: #2c3e50;
-      color: #fff;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin: 10px 0 20px;
-      font-size: 1.2rem;
-    }
-
-    .btn-whatsapp {
-      background: #25d366;
-      color: #fff;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .products {
-      padding: 40px 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .product-card {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-      text-align: center;
-    }
-
-    .product-card:hover {
-      transform: scale(1.03);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-
-    .product-card h3 {
-      margin: 15px 0;
-    }
-
-    .product-card button {
-      margin-bottom: 15px;
-      padding: 10px 20px;
-      background: #2c3e50;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 400px;
-      width: 90%;
-      text-align: center;
-      position: relative;
-      animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    .modal-content h2 {
-      margin-top: 0;
-    }
-
-    .modal-content .btn {
-      display: block;
-      margin: 10px auto;
-      padding: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    .btn-buy { background: #25d366; }
-    .btn-ask { background: #007bff; }
-    .btn-close { background: #e74c3c; }
-
-    /* Sections */
-    .why-us, .contact {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .why-us h2, .contact h2 {
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-
-    iframe {
-      width: 100%;
-      height: 250px;
-      border: 0;
-      margin-top: 20px;
-    }
-    /* Base styles */
-:root {
-  --primary-color: #333;
-  --secondary-color: #666;
-  --max-width: 1200px;
-}
-
-/* Responsive container */
-.container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* Responsive images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsive typography */
-html {
-  font-size: 16px;
-}
-
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-/* Responsive grid system */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-/* Responsive navigation */
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-
-/* Mobile menu */
-@media screen and (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-  }
-  
-  .nav-items {
-    width: 100%;
-    display: none;
-  }
-  
-  .nav-items.active {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/* Cards and content */
-.card {
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Responsive spacing */
-@media screen and (max-width: 480px) {
-  .container {
-    padding: 0 0.5rem;
-  }
-  
-  .card {
-    padding: 0.75rem;
-  }
-}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">BrightBuild</div>
+    <ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero -->
   <header>
     <h1>BrightBuild Hardware</h1>
     <p>Quality Building Materials Delivered Fast in Nairobi</p>
-    <a href="https://wa.me/254700000000?text=Hello%20BrightBuild%20Hardware%2C%20I%20would%20like%20to%20place%20an%20order." class="btn-whatsapp">Call Us on WhatsApp</a>
+    <a href="https://wa.me/254707063818?text=Hello%20BrightBuild%20Hardware%2C%20I%20would%20like%20to%20place%20an%20order." class="btn-whatsapp">Call Us on WhatsApp</a>
   </header>
 
   <!-- Products -->
-  <section class="products">
-    <div class="product-card" data-name="Cement" data-price="700 KES per bag" data-stock="120 bags">
+  <section id="products" class="products">
+    <div class="product-card" data-name="Cement" data-price="700 KES per bag" data-stock="120 bags" data-description="High-quality Simba Cement, perfect for all your construction needs. Strong and durable.">
       <img src="images/Simba-Cement-32.5R-500x375.webp" alt="Cement">
       <h3>Cement</h3>
       <button>View Details</button>
     </div>
 
-    <div class="product-card" data-name="Roofing Sheets" data-price="1,200 KES each" data-stock="75 sheets">
+    <div class="product-card" data-name="Roofing Sheets" data-price="1,200 KES each" data-stock="75 sheets" data-description="Durable and weather-resistant roofing sheets, available in various colors and sizes.">
       <img src="images/Iron-Sheetsp-500x500.webp" alt="Roofing Sheets">
       <h3>Roofing Sheets</h3>
       <button>View Details</button>
     </div>
 
-    <div class="product-card" data-name="Steel Rods" data-price="850 KES per rod" data-stock="200 rods">
+    <div class="product-card" data-name="Razor wire" data-price="850 KES per rod" data-stock="200 rods" data-description="High-tensile steel rods for reinforcing concrete structures. Available in various diameters.">
       <img src="images/Meters-Razor-Wire.webp" alt="Razor wire">
       <h3>Razor wire</h3>
       <button>View Details</button>
     </div>
 
-    <div class="product-card" data-name="Paint" data-price="1,500 KES per tin" data-stock="60 tins">
+    <div class="product-card" data-name="Paint" data-price="1,500 KES per tin" data-stock="60 tins" data-description="Premium quality paint with excellent coverage and a long-lasting finish. Wide range of colors available.">
       <img src="images/Covermatt-Emulsion.webp" alt="Paint">
       <h3>Paint</h3>
       <button>View Details</button>
     </div>
 
-    <div class="product-card" data-name="Timber" data-price="950 KES per piece" data-stock="90 pieces">
+    <div class="product-card" data-name="Timber" data-price="950 KES per piece" data-stock="90 pieces" data-description="High-quality timber for all your construction and carpentry needs. Available in various sizes.">
       <img src="images/Cypress-Timber-10-x-1.webp" alt="Timber">
       <h3>Timber</h3>
       <button>View Details</button>
     </div>
 
-    <div class="product-card" data-name="Nails" data-price="300 KES per kg" data-stock="150 kg">
+    <div class="product-card" data-name="Nails" data-price="300 KES per kg" data-stock="150 kg" data-description="Strong and reliable nails for all types of construction and woodworking projects.">
       <img src="images/Ordinary-Nails-10-500x500.webp" alt="Nails">
       <h3>Nails</h3>
       <button>View Details</button>
@@ -286,7 +64,7 @@ html {
   </section>
 
   <!-- Why Choose Us -->
-  <section class="why-us">
+  <section id="why-us" class="why-us">
     <h2>Why Choose Us</h2>
     <ul>
       <li>✔ Reliable stock always available</li>
@@ -297,10 +75,10 @@ html {
   </section>
 
   <!-- Contact -->
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>Phone: +254 700 000 000</p>
-    <a href="https://wa.me/254700000000?text=Hello%20BrightBuild%20Hardware%2C%20I%20need%20more%20information." class="btn-whatsapp">Chat on WhatsApp</a>
+    <a href="https://wa.me/254707070638?text=Hello%20BrightBuild%20Hardware%2C%20I%20need%20more%20information." class="btn-whatsapp">Chat on WhatsApp</a>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.184939647145!2d36.8219!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10a4c2c27ef9%3A0x93aa1d7e5b77f48!2sNairobi%20CBD!5e0!3m2!1sen!2ske!4v0000000000" allowfullscreen></iframe>
   </section>
 
@@ -308,6 +86,7 @@ html {
   <div class="modal" id="productModal">
     <div class="modal-content">
       <h2 id="modalName"></h2>
+      <p id="modalDescription" style="margin-bottom: 20px;"></p>
       <p><strong>Price:</strong> <span id="modalPrice"></span></p>
       <p><strong>Stock:</strong> <span id="modalStock"></span></p>
       <a id="buyNow" class="btn btn-buy" target="_blank">Buy Now on WhatsApp</a>
@@ -316,45 +95,6 @@ html {
     </div>
   </div>
 
-  <script>
-    const modal = document.getElementById('productModal');
-    const modalName = document.getElementById('modalName');
-    const modalPrice = document.getElementById('modalPrice');
-    const modalStock = document.getElementById('modalStock');
-    const buyNowBtn = document.getElementById('buyNow');
-    const askMoreBtn = document.getElementById('askMore');
-    const closeModalBtn = document.getElementById('closeModal');
-
-    const phone = "254700000000"; // Replace with real shop number
-
-    document.querySelectorAll('.product-card button').forEach(btn => {
-      btn.addEventListener('click', e => {
-        const card = e.target.closest('.product-card');
-        const name = card.dataset.name;
-        const price = card.dataset.price;
-        const stock = card.dataset.stock;
-
-        modalName.textContent = name;
-        modalPrice.textContent = price;
-        modalStock.textContent = stock;
-
-        const messageBuy = `Hi BrightBuild, I want to buy ${name}. (${price}, ${stock} available)`;
-        const messageAsk = `Hi BrightBuild, I’d like more info about ${name}.`;
-
-        buyNowBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(messageBuy)}`;
-        askMoreBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(messageAsk)}`;
-
-        modal.style.display = 'flex';
-      });
-    });
-
-    closeModalBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', e => {
-      if (e.target === modal) modal.style.display = 'none';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
